@@ -131,6 +131,7 @@
                 <version>${maven-surefire-plugin.version}</version>
                 <configuration>
                     <excludedGroups>querqy.solr.it.IntegrationTest</excludedGroups>
+                    <skipTests>true</skipTests>                    
                 </configuration>
             </plugin>
 
@@ -174,7 +175,7 @@
                 </executions>
             </plugin>
 
-            <!-- Execute Docker integration tests -->
+            <!-- Execute Docker integration tests
             <plugin>
                 <artifactId>maven-failsafe-plugin</artifactId>
                 <version>${maven-failsafe-plugin.version}</version>
@@ -189,6 +190,7 @@
                         <project.version>${project.version}</project.version>
                         <solr.test.versions>solr:8.7,solr:8.6,solr:8.5,solr:8.4,solr:8.3,solr:8.2,solr:8.1</solr.test.versions> 
                     </systemPropertyVariables>
+                    <skipTests>true</skipTests>
                 </configuration>
                 <executions>
                     <execution>
@@ -199,7 +201,7 @@
                     </execution>
                 </executions>
             </plugin>
-
+			-->
         </plugins>
     </build>
 </project>

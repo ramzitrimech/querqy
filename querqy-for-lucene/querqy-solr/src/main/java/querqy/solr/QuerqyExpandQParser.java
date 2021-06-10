@@ -121,7 +121,9 @@ public class QuerqyExpandQParser extends QParser {
             }
 
             termText = params.get("spellcheck.q", "*:*");
-            mutableParams.set("q", termText);
+            if(termText != null)
+                termText = termText.toLowerCase();
+            mutableParams.set("q", termText.toLowerCase());
 
             String qf = fields.entrySet()
                     .stream()
