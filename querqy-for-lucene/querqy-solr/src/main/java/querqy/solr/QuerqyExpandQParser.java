@@ -131,6 +131,8 @@ public class QuerqyExpandQParser extends QParser {
                     .collect(joining(" "));
 
             mutableParams.set("qf", qf);
+            mutableParams.set("mm", "100%");
+            mutableParams.set("tie", "0.1");
             parsedQueryString = termText;
             parsedQf = qf;
 
